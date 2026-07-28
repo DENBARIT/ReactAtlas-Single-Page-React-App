@@ -9,7 +9,7 @@ function HomePage() {
         </h1>
   {/* this causes a page reload 
    <a href="/pricing">Pricing </a>       */}
-<Link to="/pricing">Pricing</Link>
+<Link to="/app">Go to App</Link>
 
     </div>
 }
