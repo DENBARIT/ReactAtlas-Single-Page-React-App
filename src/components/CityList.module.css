@@ -11,5 +11,6 @@
 }
 
 .cityList::-webkit-scrollbar {
+  /* To hide the scrollbar */
   width: 0;
 }
