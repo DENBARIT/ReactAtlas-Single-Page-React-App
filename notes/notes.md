@@ -9,3 +9,7 @@ Nested Routes and  Index routes
 part 10
 using <Outlet> for the nested routes
 we use index element for the default path
+
+13.Params and QueryStrings 
+Are used to pass data to the next  page to 
+QueryString=>to store global state easily accessible 

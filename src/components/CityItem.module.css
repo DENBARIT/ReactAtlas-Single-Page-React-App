@@ -37,6 +37,9 @@
 }
 
 .deleteBtn {
+  display: flex;             
+  justify-content: center;   
+  align-items: center;  
   height: 2rem;
   aspect-ratio: 1;
   border-radius: 50%;
@@ -44,12 +47,15 @@
   background-color: var(--color-dark--1);
   color: var(--color-light--2);
   font-size: 1.6rem;
-  font-weight: 400;
+  /* font-weight: 400; */
+  align-items: center;
   cursor: pointer;
+
   transition: all 0.2s;
 }
 
 .deleteBtn:hover {
   background-color: var(--color-brand--1);
   color: var(--color-dark--1);
+  
 }
