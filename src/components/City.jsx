@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 function City() {
   // TEMP DATA
-  const {id} = useParams();
+  // const {id} = useParams();
   // console.log(x)
   const currentCity = {
     cityName: "Lisbon",
@@ -53,8 +53,11 @@ function City() {
   //   </div>
   // );
 
-return (
-<h1>City {id} </h1>
+return (<h1>City
+
+</h1>
+
+
 )
 
 }

@@ -13,3 +13,8 @@ we use index element for the default path
 13.Params and QueryStrings 
 Are used to pass data to the next  page to 
 QueryString=>to store global state easily accessible 
+useParams is for the dynamic path variables defined with a colon (/:id).                  useSearchParams is for the filtering options that come after the question mark (?).Here is a quick summary of how they operate in your code:1. useParams (The /:id path)It captures the ID of the specific city you click on. Without this parameter, the page cannot exist because it doesn't know which city details to load.URL: /app/cities/98443197Code: const { id } = useParams();Result: id equals "98443197".
+2. useSearchParams (The ?lat=...&lng=... filters)It captures optional configurations like map locations or search sorting filters. If you delete these from the URL, the page still loads perfectly fine—it just resets your view.URL: /app/cities/98443197?lat=52.53&lng=13.37Code: const lat = searchParams.get("lat");Result: lat equals "52.53".
+
+One Extra Bonus Difference
+useParams is read-only: You can only change it by clicking a link to a new page.                 useSearchParams can write: You can use setSearchParams({ lat: 40, lng: -74 }) to programmatically update the URL filters without making the user leave the current page.
