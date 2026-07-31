@@ -2,8 +2,11 @@ import styles from './CountryList.module.css'
 import Spinner from "./Spinner"
 import CountryItem from "./CountryItem"
 import Message from "./Message"
-function CountryList({cities,isLoading}) {
+import { useCities } from '../CitiesContext/CitiesContext'
+function CountryList() {
     // const countries = cities.map(city => city.country);
+    const {cities,isLoading} = useCities();
+
     if(isLoading) return <Spinner/>
     if(cities.length === 0) return <Message message="No cities to display."/>
     const countries = cities.reduce((arr, city) => {

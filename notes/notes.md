@@ -18,3 +18,9 @@ useParams is for the dynamic path variables defined with a colon (/:id).        
 
 One Extra Bonus Difference
 useParams is read-only: You can only change it by clicking a link to a new page.                 useSearchParams can write: You can use setSearchParams({ lat: 40, lng: -74 }) to programmatically update the URL filters without making the user leave the current page.
+
+<!-- here for the route to directly connected with the cities path we use Navigate  -->
+    <Route index element={<Navigate to="cities" replace />} />
+
+navigate function  imperative 
+Navigate=>in declarative way for nested routes
