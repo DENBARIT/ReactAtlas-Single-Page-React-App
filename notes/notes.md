@@ -24,3 +24,6 @@ useParams is read-only: You can only change it by clicking a link to a new page.
 
 navigate function  imperative 
 Navigate=>in declarative way for nested routes
+
+<!-- the marker position and the map needs map array  -->
+    <Marker position={[city.position.lat, city.position.lng]} key={city.id}>
