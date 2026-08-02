@@ -6,13 +6,12 @@ import { MapContainer, TileLayer, Marker, Popup,useMapEvents } from 'react-leafl
 import { useCities } from "../CitiesContext/CitiesContext";
 import { useGeolocate } from "../Hooks/useGeolocation";
 import Button from "./Button";
-
+import { useUrlPosition } from "../Hooks/useUrlPosition";
 function Map(){
 const {cities}= useCities();
-  const [searchParams] = useSearchParams();
-  const mapLat =Number(searchParams.get("lat"));
-  const mapLng = Number(searchParams.get("lng"));
+  
   const {isLoading:isLoadingPosition,position:geolocationPosition,getPosition,error}=useGeolocate();
+  const [mapLat, mapLng] = useUrlPosition();
   // const mapPosition = Number.isFinite(mapLat) && Number.isFinite(mapLng)
   //   ? [mapLat, mapLng]
   //   : geolocationPosition
@@ -74,7 +73,10 @@ function DetectClick(){
   const navigate=useNavigate();
 
   useMapEvents({
-    click:(e)=>navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`)
+    click:(e)=>{
+      const {lat,lng}=e.latlng.wrap();
+      navigate(`form?lat=${lat}&lng=${lng}`);
+    }
   });
   return null;
 }

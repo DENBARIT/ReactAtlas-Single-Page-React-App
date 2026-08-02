@@ -27,3 +27,5 @@ Navigate=>in declarative way for nested routes
 
 <!-- the marker position and the map needs map array  -->
     <Marker position={[city.position.lat, city.position.lng]} key={city.id}>
+
+For the date picker=> npm i react-datepicker
