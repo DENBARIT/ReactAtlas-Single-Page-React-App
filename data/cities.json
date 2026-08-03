@@ -10,7 +10,7 @@
         "lat": 38.727881642324164,
         "lng": -9.140900099907554
       },
-      "id": 73930385
+      "id": "73930385"
     },
     {
       "cityName": "Madrid",
@@ -22,7 +22,7 @@
         "lat": 40.46635901755316,
         "lng": -3.7133789062500004
       },
-      "id": 17806751
+      "id": "17806751"
     },
     {
       "cityName": "Berlin",
@@ -34,7 +34,316 @@
         "lat": 52.53586782505711,
         "lng": 13.376933665713324
       },
-      "id": 98443197
+      "id": "98443197"
+    },
+    {
+      "cityName": "Qikiqtaaluk Region",
+      "emoji": "🇨🇦",
+      "date": "2026-08-02T18:43:03.710Z",
+      "notes": "sfa",
+      "position": {
+        "lat": 76.17102914560914,
+        "lng": -106.47950062500001
+      },
+      "id": "8L879JE4W2g"
+    },
+    {
+      "cityName": "Qikiqtaaluk Region",
+      "emoji": "🇨🇦",
+      "date": "2026-08-02T18:43:03.710Z",
+      "notes": "sfa",
+      "position": {
+        "lat": 76.17102914560914,
+        "lng": -106.47950062500001
+      },
+      "id": "93Xd37_GWrY"
+    },
+    {
+      "cityName": "Qikiqtaaluk Region",
+      "emoji": "🇨🇦",
+      "date": "2026-08-02T18:43:03.710Z",
+      "notes": "sfa",
+      "position": {
+        "lat": 76.17102914560914,
+        "lng": -106.47950062500001
+      },
+      "id": "Ap7XmmVkHgY"
+    },
+    {
+      "cityName": "Qikiqtaaluk Region",
+      "emoji": "🇨🇦",
+      "date": "2026-08-02T18:43:03.710Z",
+      "notes": "sfa",
+      "position": {
+        "lat": 76.17102914560914,
+        "lng": -106.47950062500001
+      },
+      "id": "0p35TVVlEcA"
+    },
+    {
+      "cityName": "Qikiqtaaluk Region",
+      "emoji": "🇨🇦",
+      "date": "2026-08-02T18:43:03.710Z",
+      "notes": "sfa",
+      "position": {
+        "lat": 76.17102914560914,
+        "lng": -106.47950062500001
+      },
+      "id": "7U-vAmWmuGw"
+    },
+    {
+      "cityName": "Qikiqtaaluk Region",
+      "emoji": "🇨🇦",
+      "date": "2026-08-02T18:43:03.710Z",
+      "notes": "sfa",
+      "position": {
+        "lat": 76.17102914560914,
+        "lng": -106.47950062500001
+      },
+      "id": "LPi27mxdJws"
+    },
+    {
+      "cityName": "Qikiqtaaluk Region",
+      "emoji": "🇨🇦",
+      "date": "2026-08-02T18:43:03.710Z",
+      "notes": "sfa",
+      "position": {
+        "lat": 76.17102914560914,
+        "lng": -106.47950062500001
+      },
+      "id": "_bqhjB3Gp7E"
+    },
+    {
+      "cityName": "Qikiqtaaluk Region",
+      "emoji": "🇨🇦",
+      "date": "2026-08-02T18:43:03.710Z",
+      "notes": "sfa",
+      "position": {
+        "lat": 76.17102914560914,
+        "lng": -106.47950062500001
+      },
+      "id": "DoNpKsqOJCY"
+    },
+    {
+      "cityName": "Qikiqtaaluk Region",
+      "emoji": "🇨🇦",
+      "date": "2026-08-02T18:43:03.710Z",
+      "notes": "sfa",
+      "position": {
+        "lat": 76.17102914560914,
+        "lng": -106.47950062500001
+      },
+      "id": "OtFeWk_d5SQ"
+    },
+    {
+      "cityName": "Qikiqtaaluk Region",
+      "emoji": "🇨🇦",
+      "date": "2026-08-02T18:43:03.710Z",
+      "notes": "sfa",
+      "position": {
+        "lat": 76.17102914560914,
+        "lng": -106.47950062500001
+      },
+      "id": "bKzww84jaGQ"
+    },
+    {
+      "cityName": "Qikiqtaaluk Region",
+      "emoji": "🇨🇦",
+      "date": "2026-08-02T18:43:03.710Z",
+      "notes": "sfa",
+      "position": {
+        "lat": 76.17102914560914,
+        "lng": -106.47950062500001
+      },
+      "id": "iN3AxnbDXZI"
+    },
+    {
+      "cityName": "Qikiqtaaluk Region",
+      "emoji": "🇨🇦",
+      "date": "2026-08-02T18:43:03.710Z",
+      "notes": "sfa",
+      "position": {
+        "lat": 76.17102914560914,
+        "lng": -106.47950062500001
+      },
+      "id": "R_ZJUIgbCvA"
+    },
+    {
+      "cityName": "Qikiqtaaluk Region",
+      "emoji": "🇨🇦",
+      "date": "2026-08-02T18:43:03.710Z",
+      "notes": "sfa",
+      "position": {
+        "lat": 76.17102914560914,
+        "lng": -106.47950062500001
+      },
+      "id": "JvdMjswBMU8"
+    },
+    {
+      "cityName": "Qikiqtaaluk Region",
+      "emoji": "🇨🇦",
+      "date": "2026-08-02T18:43:03.710Z",
+      "notes": "sfa",
+      "position": {
+        "lat": 76.17102914560914,
+        "lng": -106.47950062500001
+      },
+      "id": "bvpjZed8d_k"
+    },
+    {
+      "cityName": "Qikiqtaaluk Region",
+      "emoji": "🇨🇦",
+      "date": "2026-08-02T18:43:03.710Z",
+      "notes": "sfa",
+      "position": {
+        "lat": 76.17102914560914,
+        "lng": -106.47950062500001
+      },
+      "id": "rERjErnBOkI"
+    },
+    {
+      "cityName": "Qikiqtaaluk Region",
+      "emoji": "🇨🇦",
+      "date": "2026-08-02T18:43:03.710Z",
+      "notes": "sfa",
+      "position": {
+        "lat": 76.17102914560914,
+        "lng": -106.47950062500001
+      },
+      "id": "HsctPUR2ZmM"
+    },
+    {
+      "cityName": "Qikiqtaaluk Region",
+      "emoji": "🇨🇦",
+      "date": "2026-08-02T18:43:03.710Z",
+      "notes": "sfa",
+      "position": {
+        "lat": 76.17102914560914,
+        "lng": -106.47950062500001
+      },
+      "id": "_-YDGep7Y-U"
+    },
+    {
+      "cityName": "Qikiqtaaluk Region",
+      "emoji": "🇨🇦",
+      "date": "2026-08-02T18:43:03.710Z",
+      "notes": "sfa",
+      "position": {
+        "lat": 76.17102914560914,
+        "lng": -106.47950062500001
+      },
+      "id": "Fqc2zGjhv1U"
+    },
+    {
+      "cityName": "Qikiqtaaluk Region",
+      "emoji": "🇨🇦",
+      "date": "2026-08-02T18:43:03.710Z",
+      "notes": "sfa",
+      "position": {
+        "lat": 76.17102914560914,
+        "lng": -106.47950062500001
+      },
+      "id": "7I5xu4mf00k"
+    },
+    {
+      "cityName": "Qikiqtaaluk Region",
+      "emoji": "🇨🇦",
+      "date": "2026-08-02T19:06:53.111Z",
+      "notes": "",
+      "position": {
+        "lat": 76.36881677566844,
+        "lng": -105.49638218656105
+      },
+      "id": "lEqInzweIwo"
+    },
+    {
+      "cityName": "Qikiqtaaluk Region",
+      "emoji": "🇨🇦",
+      "date": "2026-08-02T19:06:53.111Z",
+      "notes": "",
+      "position": {
+        "lat": 76.36881677566844,
+        "lng": -105.49638218656105
+      },
+      "id": "aZ_xtuPB_38"
+    },
+    {
+      "cityName": "Qikiqtaaluk Region",
+      "emoji": "🇨🇦",
+      "date": "2026-08-02T19:06:53.111Z",
+      "notes": "",
+      "position": {
+        "lat": 76.36881677566844,
+        "lng": -105.49638218656105
+      },
+      "id": "pvEoDIzBVwQ"
+    },
+    {
+      "cityName": "Qikiqtaaluk Region",
+      "emoji": "🇨🇦",
+      "date": "2026-08-02T19:19:40.286Z",
+      "notes": "efr",
+      "position": {
+        "lat": 76.01653123205574,
+        "lng": -106.32293701171875
+      },
+      "id": "tFmO9ymwNEI"
+    },
+    {
+      "cityName": "Qikiqtaaluk Region",
+      "emoji": "🇨🇦",
+      "date": "2026-08-02T19:19:40.286Z",
+      "notes": "efr",
+      "position": {
+        "lat": 76.01653123205574,
+        "lng": -106.32293701171875
+      },
+      "id": "zE6SrYwx2gg"
+    },
+    {
+      "cityName": "Qikiqtaaluk Region",
+      "emoji": "🇨🇦",
+      "date": "2026-08-02T19:19:40.286Z",
+      "notes": "efr",
+      "position": {
+        "lat": 76.01653123205574,
+        "lng": -106.32293701171875
+      },
+      "id": "hsAcZRwTRRw"
+    },
+    {
+      "cityName": "Qikiqtaaluk Region",
+      "emoji": "🇨🇦",
+      "date": "2026-08-02T19:36:14.957Z",
+      "notes": "",
+      "position": {
+        "lat": 76.03087200832455,
+        "lng": -101.953125
+      },
+      "id": "gdxzRx_E2wU"
+    },
+    {
+      "cityName": "Mpraeso",
+      "emoji": "🇬🇭",
+      "date": "2026-08-02T19:36:21.234Z",
+      "notes": "",
+      "position": {
+        "lat": 6.620164311108801,
+        "lng": -0.5712890625
+      },
+      "id": "ruNUshNSDbY"
+    },
+    {
+      "cityName": "Ekeremor",
+      "emoji": "🇳🇬",
+      "date": "2026-08-02T19:39:13.875Z",
+      "notes": "Csac",
+      "position": {
+        "lat": 5.090944175033399,
+        "lng": 5.9326171875
+      },
+      "id": "RnNgDhjFmdk"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

@@ -36,8 +36,41 @@ async function fetchCities(){
     setIsLoading(false)
   }
 }
- 
-    return (<CitiesContext.Provider value={{cities, isLoading, currentCity, getCity}}>
+async function createCity(newCity){
+  try {
+    setIsLoading(true)
+  const res=await fetch(`${BASE_URL}/cities`,{
+    method:"POST",
+    body:JSON.stringify(newCity),
+    headers:{
+      "Content-Type":"application/json"
+    }
+  });
+  if(!res.ok) throw new Error("Error creating city")
+  const data=await res.json();
+  setCities((cities)=>[...cities,data])
+}catch(err){
+  alert(err.message)
+}finally{
+    setIsLoading(false)
+  }
+}
+
+ async function deleteCity(id){
+  try {
+    setIsLoading(true)
+  const res=await fetch(`${BASE_URL}/cities/${id}`,{
+    method:"DELETE"
+  });
+  const data=await res.json();
+  setCities(cities=>cities.filter(city=>city.id!==id ))
+}catch{
+  alert("There was an error deleting the city")
+}finally{
+    setIsLoading(false)
+  }
+}
+    return (<CitiesContext.Provider value={{cities, isLoading, currentCity, getCity, createCity,deleteCity}}>
         {children}
     </CitiesContext.Provider>
 )}

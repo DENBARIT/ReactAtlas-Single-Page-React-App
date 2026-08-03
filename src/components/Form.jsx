@@ -6,9 +6,15 @@ import Button from "./Button";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import BackButton from "./BackButton";
+import "react-datepicker/dist/react-datepicker.css";
+
 import { useUrlPosition } from "../Hooks/useUrlPosition";
 import Spinner from "./Spinner";
+// import DatePicker from "./react-datepicker/DatePicker";
+import DatePicker from "react-datepicker";
 import Message from "./Message";
+import { useCities } from "../CitiesContext/CitiesContext";
+// here (the special letters used to make flags) start at 127462 (which represents 🇦). Because the uppercase letter "A" has a character code of 65, adding 127397 to 65 perfectly matches 127462 (127397 + 65 = 127462).
 export function convertToEmoji(countryCode) {
   const codePoints = countryCode
     .toUpperCase()
@@ -16,13 +22,15 @@ export function convertToEmoji(countryCode) {
     .map((char) => 127397 + char.charCodeAt());
   return String.fromCodePoint(...codePoints);
 }
-
 function Form() {
+  const navigate = useNavigate();
   const [cityName, setCityName] = useState("");
+
   const [country, setCountry] = useState("");
   const [isloadingGeocoding, setIsLoadingGeocoding] = useState(false);
   const [date, setDate] = useState(new Date());
   const [notes, setNotes] = useState("");
+  const {createCity, isLoading} = useCities();
   const [emoji, setEmoji] = useState("");
 const [maplat, maplng] = useUrlPosition();
 const [geoCodingError, setGeocodingError] = useState("");
@@ -45,8 +53,6 @@ async function fetchCityData(){
 }
 catch(err){
   // console.error(err);
- 
-
   console.log(err);
 }
 finally{
@@ -60,11 +66,29 @@ return function cleanup(){
   setCountry("");
   setEmoji("");
 }},[maplat,maplng]);
+// this function must be async function since createCity is an action
+async function handleSubmit(e){
+  e.preventDefault();
+  if(!cityName || !date) return;
+  const newCity={
+cityName,
+emoji,
+date,
+notes,
+position:{
+  lat:maplat,
+  lng:maplng
+}
+  }
+
+ await createCity(newCity);
+ navigate("/app/cities");
+}
 if(isloadingGeocoding) return <Spinner/>
 if(!maplat || !maplng) return <Message message="Start by clicking somewhere on the map"/>
 if(geoCodingError) return <Message message={geoCodingError} type="error"/>
   return (
-    <form className={styles.form} >
+    <form className={`${styles.form} ${isLoading ? "loading" : ""}`} onSubmit={handleSubmit}>
       <div className={styles.row}>
         <label htmlFor="cityName">City name</label>
         <input
@@ -77,11 +101,12 @@ if(geoCodingError) return <Message message={geoCodingError} type="error"/>
 
       <div className={styles.row}>
         <label htmlFor="date">When did you go to {cityName}?</label>
-        <input
+        {/* <input
           id="date"
           onChange={(e) => setDate(e.target.value)}
           value={date}
-        />
+        /> */}
+        <DatePicker selected={date} onChange={date=>setDate(date)} dateFormat="MM/dd/yyyy"  />
       </div>
 
       <div className={styles.row}>

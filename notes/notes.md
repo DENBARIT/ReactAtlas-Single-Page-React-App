@@ -29,3 +29,6 @@ Navigate=>in declarative way for nested routes
     <Marker position={[city.position.lat, city.position.lng]} key={city.id}>
 
 For the date picker=> npm i react-datepicker
+
+We need ReactQuery for automatic refetching 
+for the form we use labelfor for marking the placeholder of the corresponding label 
