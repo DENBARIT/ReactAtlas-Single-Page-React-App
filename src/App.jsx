@@ -13,6 +13,7 @@ import { Navigate } from "react-router-dom";
 import Form from "./components/Form";
 import { CitiesProvider } from "./CitiesContext/CitiesContext";
 import { AuthProvider } from "./CitiesContext/FakeAuthContect";
+import ProtectedRoute from "./components/ProtectedRoute";
 // const BASE_URL="http://localhost:8000";
 export default function App() {
  
@@ -43,7 +44,11 @@ export default function App() {
         <Route path="/product" element={<Product />} />
         <Route path="/pricing" element={<Pricing />} />
        
-        <Route path="/app" element={<AppLayout />} >
+        <Route path="/app" element={
+       <ProtectedRoute>
+          <AppLayout />
+          </ProtectedRoute>
+          } >
         {/* <Route index element={<CityList  cities={cities} isLoading={isLoading}/>} /> */}
         <Route index element={<Navigate to="cities" replace />} />
         <Route path="cities" element={<CityList />} />
