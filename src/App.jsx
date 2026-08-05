@@ -12,6 +12,7 @@ import CountryList from "./components/CountryList";
 import { Navigate } from "react-router-dom";
 import Form from "./components/Form";
 import { CitiesProvider } from "./CitiesContext/CitiesContext";
+import { AuthProvider } from "./CitiesContext/FakeAuthContect";
 // const BASE_URL="http://localhost:8000";
 export default function App() {
  
@@ -32,7 +33,9 @@ export default function App() {
 //  },[]);
 
   return (
+    <AuthProvider>
    <CitiesProvider>  
+   
     <BrowserRouter>
    
       <Routes>
@@ -53,6 +56,6 @@ export default function App() {
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     
-    </BrowserRouter></CitiesProvider>
+    </BrowserRouter></CitiesProvider></AuthProvider>
   );
 }
