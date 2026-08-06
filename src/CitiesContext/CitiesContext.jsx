@@ -1,6 +1,6 @@
 
 import {createContext} from "react";
-import {useEffect,useContext,useReducer} from "react";
+import {useEffect,useContext,useReducer,useCallback} from "react";
 const CitiesContext=createContext();
 const BASE_URL="http://localhost:8000";
 
@@ -67,7 +67,8 @@ async function fetchCities(){
 fetchCities()
  },[]);
 
- async function getCity(id){
+// we are trying to memoize ahook that are used as a depencency in another hook, so we have to use useCallback to memoize the function and avoid infinite loop
+ const getCity=useCallback(async function getCity(id){
   //we have to change the id to number since the id from the url is a string and the id from the state is a number
   if(currentCity?.id===Number(id)) return;
     dispatch({type:"loading"})
@@ -85,7 +86,7 @@ dispatch({type:"city/loaded",payload:data})
       payload:"There was an error loading city..."
     })
   }
-}
+},[currentCity?.id])
 async function createCity(newCity){
   dispatch({type:"loading"})
   try {
