@@ -1,19 +1,30 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { lazy, Suspense } from "react";
+import SpinnerFullPage from "./components/SpinnerFullPage";
+
 // import {useState,useEffect} from "react";
-import Product from "./pages/Product";
-import Homepage from "./pages/Homepage";
-import Pricing from "./pages/Pricing";
-import PageNotFound from "./pages/PageNotFound";
-import AppLayout from "./pages/AppLayout";
-import Login from "./pages/Login";  
-import CityList from "./components/CityList";
-import City from "./components/City";
-import CountryList from "./components/CountryList";
-import { Navigate } from "react-router-dom";
+// import Product from "./pages/Product";
+// import Homepage from "./pages/Homepage";
+// import Pricing from "./pages/Pricing";
+// import PageNotFound from "./pages/PageNotFound";
+// import AppLayout from "./pages/AppLayout";
+// import Login from "./pages/Login";  
+// import CityList from "./components/CityList";
+// import City from "./components/City";
+// import CountryList from "./components/CountryList";
 import Form from "./components/Form";
 import { CitiesProvider } from "./CitiesContext/CitiesContext";
 import { AuthProvider } from "./CitiesContext/FakeAuthContect";
 import ProtectedRoute from "./components/ProtectedRoute";
+const Homepage=lazy(()=>import("./pages/Homepage"));
+const Product=lazy(()=>import("./pages/Product"));
+const Pricing=lazy(()=>import("./pages/Pricing"));
+const PageNotFound=lazy(()=>import("./pages/PageNotFound"));
+const AppLayout=lazy(()=>import("./pages/AppLayout"));
+const Login=lazy(()=>import("./pages/Login"));
+const CityList=lazy(()=>import("./components/CityList"));
+const City=lazy(()=>import("./components/City"));
+const CountryList=lazy(()=>import("./components/CountryList"));
 // const BASE_URL="http://localhost:8000";
 export default function App() {
  
@@ -38,7 +49,7 @@ export default function App() {
    <CitiesProvider>  
    
     <BrowserRouter>
-   
+   <Suspense fallback={<SpinnerFullPage/>}>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/product" element={<Product />} />
@@ -60,7 +71,7 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-    
+    </Suspense>
     </BrowserRouter></CitiesProvider></AuthProvider>
   );
 }
